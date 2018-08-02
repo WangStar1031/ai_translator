@@ -30,4 +30,22 @@
 		$_user = $result[0];
 		return $_user;
 	}
+	function saveFirstName( $_userName, $_firstName){
+		global $db;
+		$sql = "UPDATE user SET firstname=? WHERE nickname=?";
+		$stmt= $db->prepare($sql);
+		$stmt->execute([$_firstName, $_userName]);
+	}
+	function saveLastName( $_userName, $_lastName){
+		global $db;
+		$sql = "UPDATE user SET lastname=? WHERE nickname=?";
+		$stmt= $db->prepare($sql);
+		$stmt->execute([$_lastName, $_userName]);
+	}
+	function saveEmail( $_userName, $_eMail){
+		global $db;
+		$sql = "UPDATE user SET email=? WHERE nickname=?";
+		$stmt= $db->prepare($sql);
+		$stmt->execute([$_eMail, $_userName]);
+	}
 ?>

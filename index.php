@@ -4,6 +4,23 @@
 		header("Location: login.php");
 	require_once 'library/db_user_man.php';
 	$userName = $_SESSION['jtsUserName'];
+	if( isset($_POST['firstName'])){
+		saveFirstName($userName, $_POST['firstName']);
+	}
+	if( isset($_POST['lastName'])){
+		saveLastName($userName, $_POST['lastName']);
+	}
+	if( isset($_POST['eMail'])){
+		saveEmail($userName, $_POST['eMail']);
+	}
+	if( isset($_POST['curPass'])){
+		if( isset($_POST['newPass'])){
+
+		}
+		if( isset($_POST['conPass'])){
+
+		}
+	}
 	$userInfo = getUserInfoFromName( $userName);
 ?>
 <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
@@ -22,7 +39,7 @@
 <div class="mainContents row">
 	<div class="col-lg-6">
 		<h3>Account Details</h3>
-		<form class="col-lg-10">
+		<form class="col-lg-10" method="POST">
 			<label>User Name</label><br/>
 			<input type="text" value="<?= $userInfo['nickname'];?>" readonly><br/>
 			<label for="firstName">First Name</label><br/>
@@ -41,7 +58,7 @@
 			<input type="password" name="curPass"><br/>
 			<a href="javascript:forgotPassword();">forgot Password</a><br/>
 			<label for="firstName">New Password</label><br/>
-			<input type="password" name="newPass" value="<?= $userInfo['firstname'];?>" onkeyup="NewPassChange()"><br/>
+			<input type="password" name="newPass" onkeyup="NewPassChange()"><br/>
 			<p>
 				<table>
 					<tr>
@@ -58,8 +75,8 @@
 				</table>
 			</p>
 			<label for="lastName">Confirm Password</label><br/>
-			<input type="password" name="conPass" value="<?= $userInfo['lastname'];?>"><br/>
-			<button class="btn btn-primary">Save</button>
+			<input type="password" name="conPass"><br/>
+			<div class="btn btn-primary">Save</div>
 		</form>
 	</div>
 </div>
