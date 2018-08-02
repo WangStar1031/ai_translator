@@ -34,7 +34,7 @@ if( isset($_POST['email_name'])){
 <body>
 <main class="auth-main">
   <div class="auth-block">
-    <h3>Sign in to <img src="assets/imgs/vision-logo.png" width="50px;"> JTS</h3>
+    <h3>Sign in to Vision<!-- <img src="assets/imgs/vision-logo.png" width="50px;"> --> A.I.</h3>
     <form class="form-horizontal" method="POST">
       <div class="form-group">
         <label for="inputEmail3" class="col-sm-2 control-label">Email/Name</label>

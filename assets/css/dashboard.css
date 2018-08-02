@@ -1,32 +1,3 @@
-.topBar{
-	padding: 20px;
-	border-bottom: 1px solid #989898;
-	width: 100%;
-	z-index: 100;
-	background-color: #051d40;
-}
-.topBar a{
-	text-decoration: none;
-	color: #eee;
-}
-.topBar img, .topBar .topUserAvatar img{
-	width: 40px;
-}
-.topBar .topUserInfo{
-	cursor: pointer;
-	float: right;
-	margin-top: 15px;
-}
-.topBar .topTitle{
-	font-size: 20px;
-	position: relative;
-	margin-left: 10px;
-}
-.topBar .topUserName{
-	margin-right: 20px;
-	font-size: 20px;
-	position: relative;
-}
 .mainContents, .reports, .reportsContents{
 	width: 100%;
 	color: #888;

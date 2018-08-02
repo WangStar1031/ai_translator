@@ -22,20 +22,23 @@
 		}
 	}
 	$userInfo = getUserInfoFromName( $userName);
+	$userRole = $userInfo['role'];
+	define( "ROLE_ACCOUNT", 1);
+	define( "ROLE_DASHBOARD", 2);
+	define( "ROLE_INVITE", 4);
+	define( "ROLE_USERMAN", 8);
 ?>
+
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="assets/css/dashboard.css">
-  <link rel="icon" type="image/png" href="assets/imgs/vision-logo.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<div class="topBar col-lg-12">
-	<a href="#">
-		<img src="assets/imgs/vision-logo.png">
-		<span class="topTitle"><strong>JTS</strong> dashboard</span>
-	</a>
-	<div class="topUserInfo">
-		<a href="logout.php">Log Out &nbsp&nbsp<span><i class="fa fa-sign-out"></i></span></a>
-	</div>
-</div>
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="assets/css/dashboard.css?<?= time();?>">
+
+<link rel="icon" type="image/png" href="assets/imgs/vision-logo.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<?php
+require_once 'components/topbar.php';
+?>
 <div class="mainContents row">
 	<div class="col-lg-6">
 		<h3>Account Details</h3>
@@ -83,7 +86,7 @@
 <div class="row reports">
 	<div class="jraStewardReports col-lg-4">
 		<h3>Stewards Reports</h3>
-		<?php	
+		<?php
 			$events = glob( "logs/backup/*.event");
 			$today_events = glob("*.event");
 			$events = array_merge($events, $today_events);
@@ -126,5 +129,4 @@
 		<h3>GP Models</h3>
 	</div>
 </div>
-<script type="text/javascript" src="assets/js/jquery.min.js"></script>
 <script type="text/javascript" src="assets/js/dashboard.js"></script>
