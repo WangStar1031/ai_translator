@@ -1,0 +1,63 @@
+.topBar{
+	padding: 20px;
+	border-bottom: 1px solid #989898;
+	width: 100%;
+	z-index: 100;
+	background-color: #051d40;
+}
+.topBar a{
+	text-decoration: none;
+	color: #eee;
+}
+.topBar img, .topBar .topUserAvatar img{
+	width: 40px;
+}
+.topBar .topUserInfo{
+	cursor: pointer;
+	float: right;
+	margin-top: 15px;
+}
+.topBar .topTitle{
+	font-size: 20px;
+	position: relative;
+	margin-left: 10px;
+}
+.topBar .topUserName{
+	margin-right: 20px;
+	font-size: 20px;
+	position: relative;
+}
+.mainContents, .reports, .reportsContents{
+	width: 100%;
+	color: #888;
+	padding: 20px 30px 0px 30px;
+}
+.mainContents form{
+	padding: 30px 30px 0px 30px;
+	color: #989898;
+}
+.mainContents form input{
+	border: none;
+	border-bottom: 1px solid gray;
+	margin-bottom: 30px;
+	width: 100%;
+}
+.mainContents form input[name="curPass"]{
+	margin-bottom: 6px !important;
+}
+.mainContents form input[name="newPass"]{
+	margin-bottom: 34px !important;
+}
+.HideItem{
+	display: none!important;
+}
+p table{
+	width: 100%;
+	color: #989898;
+}
+.fa-check-circle-o{
+	color: green;
+}
+.jraStewardReports a{text-decoration: none; color: green;}
+.jraStewardReports a:hover{color: red;text-decoration: none;}
+.jraStewardReports a{height: 24px; line-height: 24px;}
