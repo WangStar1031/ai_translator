@@ -38,14 +38,20 @@
 	background-color: #f9f9f9;
 	/*min-width: 160px;*/
 	box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-	padding: 12px 16px;
+	padding: 0px;
 	z-index: 1;
 }
 .dropdown:hover .dropdown-content{
 	display: block;
 }
 .dropdown-content li{
+	padding: 8px 15px;
 	list-style-type: none;
+	min-width: 165px;
+}
+.dropdown-content li:hover{
+	background-color: lightblue;
+	border-right: 3px solid darkcyan;
 }
 .dropdown-content a{
 	color: #555;

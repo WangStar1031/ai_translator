@@ -2,17 +2,20 @@
 	require_once __DIR__ . '/MySql.php';
 	define("DB_TYPE", "mysql");
 	define("DB_HOST", "127.0.0.1");
-	define("DB_NAME", "newdatabase");
 	define("DB_USER", "root");
 
-	if(@file_get_contents(__DIR__."/localhost"))
+	if(@file_get_contents(__DIR__."/localhost")){
+		define("DB_NAME", "newdatabase");
 		define("DB_PASSWORD", "");
-	else
+	}
+	else{
+		define("DB_NAME", "ai_trans");
 		define("DB_PASSWORD", "1234567812345678");
+	}
 	$db = new Mysql();
 	function userVerification( $_userName, $_password){
 		global $db;
-		$strSql = "select * from user where (nickname = '$_userName' or email = '$_userName') and password = '$_password'";
+		$strSql = "select * from user where (nickname = '$_userName' or email = '$_userName') and binary(password) = binary('$_password')";
 		$result = $db->select($strSql);
 		if( $result == false){
 			return false;
@@ -47,5 +50,17 @@
 		$sql = "UPDATE user SET email=? WHERE nickname=?";
 		$stmt= $db->prepare($sql);
 		$stmt->execute([$_eMail, $_userName]);
+	}
+	function savePassword( $_userName, $_password){
+		global $db;
+		$sql = "UPDATE user SET password=? WHERE nickname = ?";
+		$stmt = $db->prepare($sql);
+		$stmt->execute([$_password, $_userName]);
+	}
+	function getAllUsersExceptMe($_userName){
+		global $db;
+		$sql = "select * from user where nickname <> '$_userName'";
+		$result = $db->select($sql);
+		return $result;
 	}
 ?>

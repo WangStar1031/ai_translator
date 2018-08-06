@@ -1,0 +1,14 @@
+.userManage{
+	padding: 30px;
+}
+.userManage table{
+	width: 100%;
+}
+.userManage table th, .userManage table th{
+	border: 1px solid gray;
+	text-align: center;
+}
+.inviteUser{
+	margin-top: 20px;
+	cursor: pointer;
+}
