@@ -1,56 +1,47 @@
 <?php
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-require 'src/PHPMailer.php';
-require 'src/SMTP.php';
-require 'src/Exception.php';
-
+require_once __DIR__ . '/vendor/autoload.php';
+function phpVersionCheck(){
+    $version = phpversion();
+    $MasterV = explode(".", $version)[0];
+    if( $MasterV < 7)
+        return false;
+    return true;
+}
 function custom_mail_send($mail_address, $subject, $body, $alt_body) {
+    if( !phpVersionCheck())
+        return "PHP Version Error";
+    $transport = (new Swift_SmtpTransport('smtp.office365.com', 587, 'tls'))
+        ->setUsername('chris.green@betia.co')
+        ->setPassword('tnP4e%U2djPK');
+    $mailer = new Swift_Mailer($transport);
+    $message = (new Swift_Message($subject))
+        ->setFrom(['chris.green@betia.co' => 'JTS Support'])
+        ->setTo([$mail_address => 'ToEmail'])
+        ->setBody($body)
+        ->addPart($alt_body);
 
-    $mail = new PHPMailer(true);
-    $mail->isSMTP();
-    $mail->Host = 'smtp.office365.com';
-    $mail->Port       = 587;
-    $mail->SMTPSecure = 'tls';
-    $mail->SMTPAuth   = true;
-    $mail->Username = 'chris.green@betia.co';
-    $mail->Password = 'tnP4e%U2djPK';
-    $mail->SetFrom('chris.green@betia.co', 'JTS Support');
-    $mail->addAddress($mail_address, 'ToEmail');
-    $mail->IsHTML(true);
-
-    $mail->Subject = $subject;
-    $mail->Body    = $body;
-    $mail->AltBody = $alt_body;
-
-    if(!$mail->send()) {
+    if(!$mailer->send($message)) {
         return $mail->ErrorInfo;
     } else {
         return "OK";
     }
 }
 function custom_mail_send_file($mail_address, $subject, $body, $alt_body, $fileUrl) {
+    if( !phpVersionCheck())
+        return "PHP Version Error";
+    $transport = (new Swift_SmtpTransport('smtp.office365.com', 587, 'tls'))
+        ->setUsername('chris.green@betia.co')
+        ->setPassword('tnP4e%U2djPK');
+    $mailer = new Swift_Mailer($transport);
+    $message = (new Swift_Message($subject))
+        ->setFrom(['chris.green@betia.co' => 'JTS Support'])
+        ->setTo([$mail_address => 'ToEmail'])
+        ->setBody($body)
+        ->addPart($alt_body)
+        ->attach( $file_Url);
 
-    $mail = new PHPMailer(true);
-    $mail->isSMTP();
-    $mail->Host = 'smtp.office365.com';
-    $mail->Port       = 587;
-    $mail->SMTPSecure = 'tls';
-    $mail->SMTPAuth   = true;
-    $mail->Username = 'chris.green@betia.co';
-    $mail->Password = 'tnP4e%U2djPK';
-    $mail->SetFrom('chris.green@betia.co', 'JTS Support');
-    $mail->addAddress($mail_address, 'ToEmail');
-    $mail->IsHTML(true);
-
-    $mail->Subject = $subject;
-    $mail->Body    = $body;
-    $mail->AltBody = $alt_body;
-    $mail->addAttachment($fileUrl);
-
-    if(!$mail->send()) {
+    if(!$mailer->send($message)) {
         return $mail->ErrorInfo;
     } else {
         return "OK";

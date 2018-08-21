@@ -7,11 +7,11 @@ class Mysql extends \PDO {
 
 	private $prefix = false;
 
-	public function __construct() {
+	public function __construct($_dbName=DB_NAME) {
 		parent::__construct(
 				DB_TYPE.
 				':host='.DB_HOST.
-				';dbname='.DB_NAME,
+				';dbname='.$_dbName,
 				DB_USER,
 				DB_PASSWORD);
 	}

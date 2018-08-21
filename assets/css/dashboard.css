@@ -29,6 +29,44 @@ p table{
 .fa-check-circle-o{
 	color: green;
 }
-.jraStewardReports a{text-decoration: none; color: green;}
-.jraStewardReports a:hover{color: red;text-decoration: none;}
-.jraStewardReports a{height: 24px; line-height: 24px;}
+.reports div{
+	margin-top: 60px;
+	text-align: center;
+}
+.reports a:hover{
+	text-decoration: none;
+}
+.reports a{
+	font-size: 1.5em;
+	padding: 40 60px;
+	text-decoration: none;
+	color: white;
+	border-radius: 20px;
+	width: 100%;
+	font-weight: bold;
+	display: inline-flex;
+	text-align: center;
+}
+
+.reports div:nth-child(1) a, .reports div:nth-child(5) a{
+	background-color: #2ec62e;
+}
+.reports div:nth-child(2) a, .reports div:nth-child(6) a{
+	background-color: forestgreen;
+}
+.reports div:nth-child(3) a, .reports div:nth-child(7) a{
+	background-color: #5c881a;
+}
+.reports div:nth-child(4) a, .reports div:nth-child(8) a{
+	background-color: brown;
+}
+
+.reports a{
+	min-width: 70%;
+	width: 70%;
+}
+.reports a p{
+	width: 100%;
+	text-align: center;
+	margin: 0px;
+}

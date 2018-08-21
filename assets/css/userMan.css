@@ -8,7 +8,17 @@
 	border: 1px solid gray;
 	text-align: center;
 }
-.inviteUser{
+.userManage table td{
+	text-align: center;
+}
+.userManage table td img{
+	width: 30px;
+	padding: 5px;
+}
+.userManage table tr:nth-child(even){
+	background-color: #ddf9ff;
+}
+.inviteUser, .btnSave, .btnDelete{
 	margin-top: 20px;
 	cursor: pointer;
 }
