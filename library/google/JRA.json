@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "jra-stewards-rep-1527417404981",
+  "private_key_id": "0214c409637e2c8bac6ca0b77975dc7b9dc74906",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC61qf7ImOOtgav\nBlFHHfQWajSFsWzG+MJ9swJaWYWUbFqPhc5GWVCUGuIEAOm3PUL5ed3q+ESZCYc6\nN/O9EqhgLLLfCEcGSZU77k8KGVE6EmWaoSOi7jmGgwYi5xCLci63rKmlx371pODW\nGizqDq57CN59PTx3rIajI2EwfGhPsuSsb5g4hNX/g0Sqf9ykjNs1TbslwogN8vjU\nbTaw6J6YTrOpqX1hM2sOp8Uj95My5nsUF3AcnB/2sKLbuBFO+IMFJDqHDNIwEXMP\nF8x9YGVqCCJIZ5T4qVANv3+CAouFmKhE4VadPsudB/Y2QVVNA/1a024q1TnWfcs1\nFLKmYsdlAgMBAAECggEAWYt+V6isIV4RBvpWouhyrvl4saiOsy/O+vJ7yrSEBlYF\n8ypUabftnAXkU7niSX11Z16mYrJZIiWEZ30gdnoGM43Irobnj1ZdzSrSO8tVeCkQ\nBBN9ol1dOZ/7JWgrsEFprYL1jav2p6E9Vq+V3hlqOzJNe6WJIOwRXQecUWIWljcb\nqEVSb2ffmyCDNcquxyV1ma3Sj3CBThzsri75SJc0zVryHBiXr/YkLXJr6zWoMOaP\nsf/OAMEwjg2DO7RXOHX4AEVc7S/AfIu5I9T8h6oJYvt1VuLn5WPTwNhdu01aGHtP\nFYxvTMTr6oFXq4JiKYVZlbSdBXdR1TfIVjAhopdBQwKBgQDcd4ucyLLT60HIx6Rb\nUZtVlzPE/MC6HZlpR0qHrQjMfpR0xjPXpKejIXIhRkbFyt+TIfgBVSIe7JiEoiNw\nDeqCgYNUF23QS68RkWwku6kr6aMVvocLSVP7pwnYgAN27EXZONOECqv4MABBNf2S\nHMGzP8ywpmYz3xCl+iLZH9lcZwKBgQDY85oY3KmPyTr7Mm9LunWx6fQodlqTnRd1\nZ2j8NgxZ7jTZLN1PXs9F9rMqXve0GVEGZjaH7DaDHBTjX4lRWFrq6vClaFuPuRRb\nA9RECyFBv+VQM00yWMx3jW9rdJ1j/kqZzTsFlpw50enlQKsxly2TCfpoKmnvXXoA\nkvYOh6ReUwKBgGHhETLCR+KeB87EE8wXJweQ4YMLU+VNTtbWt9gUklt3tyFA/bM3\nftWF+82aDcGymCASbLDqwwNHt07rTSBqjTrzlQK4hCB9+XOrRH/qcOj2CVmWBQ6V\nt5t6RXzBGMirjTcra3yr4D2H0hUhizpbWgPix1WGCsnsts95hg8vfKjxAoGBAM7g\nzIr0sIQ6IZIz78lIzr6PF5IV+h1U6W+84nHOoEyJR7/odkkfYYuXyhWXZaFJmuf9\nQ/atGvY/KvP+wBTfqiLlUgCI2PbeSDjaF+miq13lPSgTI4PlBWTja+IN25/kdwLe\nn2+exO6l6uH/nr+1J3JVS4FVIJtuic5OVXBZjDWdAoGBAIxWjfodjCKFtbfvk5Qj\ndyo/EYrxfLq66deR4laTrL8E18QtWYIb0Edc4GQ4uCOs2YCjEPxYSHRZ/NmIPqIg\nQZ841DOxz9adkRgMGn6Txcvt1hfaGNTDQYOAzWI29UCwPqTXsXBANeIFshKBQx9m\nd/SI8QC54ACGmSVyRQsuS8qh\n-----END PRIVATE KEY-----\n",
+  "client_email": "starting-account-ofuh6n2t6vkx@jra-stewards-rep-1527417404981.iam.gserviceaccount.com",
+  "client_id": "102069591220657573876",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/starting-account-ofuh6n2t6vkx%40jra-stewards-rep-1527417404981.iam.gserviceaccount.com"
+}
