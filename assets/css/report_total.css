@@ -1,0 +1,6 @@
+.report-total{
+	padding: 20px;
+}
+.report-total a{text-decoration: none; color: green;}
+.report-total a:hover{color: red;}
+.report-total a{height: 24px; line-height: 24px;}

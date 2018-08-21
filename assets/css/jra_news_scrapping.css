@@ -1,0 +1,13 @@
+.jra_news{
+	padding: 20px;
+}
+.jra_news a{text-decoration: none; color: green;}
+.jra_news a:hover{color: red;}
+.jra_news a{height: 24px; line-height: 24px;}
+
+.jra_news li{ color: #555; list-style: none; }
+.jra_news li .title{ padding: 3px 10px; margin-right: 15px; }
+.jra_news li .race .title{ background-color: #90e7b1 }
+.jra_news li .event .title{ background-color: #f8c890 }
+.jra_news li .others .title{ background-color: #ccd9fb }
+
