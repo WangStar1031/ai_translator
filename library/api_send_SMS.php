@@ -5,7 +5,6 @@ require __DIR__ . '/twilio-php-master/Twilio/autoload.php';
 use Twilio\Rest\Client;
 $isLocal = false;
 if(@file_get_contents(__DIR__."/localhost")){
-	echo "Local Computer.";
 	$isLocal = true;
 }
 function sendSMS2Me($_body){
@@ -28,6 +27,7 @@ function sendSMS2Me($_body){
 }
 function sendSMS4Twilio($_body){
 	// Your Account SID and Auth Token from twilio.com/console
+	return;
 	global $isLocal;
 	if( $isLocal){
 		sendSMS2Me($_body);

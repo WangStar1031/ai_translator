@@ -10,4 +10,4 @@
 .jra_news li .race .title{ background-color: #90e7b1 }
 .jra_news li .event .title{ background-color: #f8c890 }
 .jra_news li .others .title{ background-color: #ccd9fb }
-
+table td, table th{ border: 1px solid gray; }

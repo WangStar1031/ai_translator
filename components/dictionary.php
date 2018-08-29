@@ -203,7 +203,7 @@
 		$(".btn_remove").unbind("click").click(function(){
 			if(confirm("Are you sure to remove that pattern?")){
 				remove_data = $(this).parent().parent().attr("aria");
-				$.post("library/trans_api.php", {"case": 3, "data": $(this).parent().parent().attr("aria")}, function(data){
+				$.post("library/trans_api.php", {"db_name": "<?= $db_name;?>", "case": 3, "data": $(this).parent().parent().attr("aria")}, function(data){
 					$("tr." + remove_data).remove();
 				});
 			}
@@ -223,7 +223,7 @@
 				check_hand = 1;
 			}
 			if(check_hand) show_loading_message();
-			$.post("library/trans_api.php", {"case": 4, "data": $(this).parent().parent().attr("aria"), "jpn_data": jpn_data, "eng_data": eng_data, "pos_data": pos_data, "check_hand": check_hand}, function(data){
+			$.post("library/trans_api.php", {"db_name": "<?= $db_name;?>", "case": 4, "data": $(this).parent().parent().attr("aria"), "jpn_data": jpn_data, "eng_data": eng_data, "pos_data": pos_data, "check_hand": check_hand}, function(data){
 				if(data){
 					$("."+data).removeClass("google_data").addClass("hand_data");
 					$("."+data).find("td").css("background-color", "#f1fdf1");
@@ -247,12 +247,12 @@
 
 	function load_words(__page_num) {
 		show_loading_message();
-		$.post("library/trans_api.php", {"case": 1, page_num: __page_num, select_case: $("#check_case option:selected").prop("value"), search_key: $("#search_key").prop("value"), sort_field:$("#sort_field").prop("value")}, function(data){
+		$.post("library/trans_api.php", {"db_name": "<?= $db_name;?>", "case": 1, page_num: __page_num, select_case: $("#check_case option:selected").prop("value"), search_key: $("#search_key").prop("value"), sort_field:$("#sort_field").prop("value")}, function(data){
 			hide_loading_message();
 			$("#tbl_words tbody").html(data);
 			reload_data($("#check_case option:selected").prop("value"));
 		});
-		$.post("library/trans_api.php", {"case": 11, page_num: __page_num, select_case: $("#check_case option:selected").prop("value"), search_key: $("#search_key").prop("value"), sort_field:$("#sort_field").prop("value")}, function(data){
+		$.post("library/trans_api.php", {"db_name": "<?= $db_name;?>", "case": 11, page_num: __page_num, select_case: $("#check_case option:selected").prop("value"), search_key: $("#search_key").prop("value"), sort_field:$("#sort_field").prop("value")}, function(data){
 			$("#page_word").html(data);
 			$("#goto_page_word").unbind("keydown").keydown(function(e){
 				if(e.keyCode == 13) {
@@ -267,12 +267,12 @@
 
 	function load_sentences(__page_num) {
 		show_loading_message();
-		$.post("library/trans_api.php", {"case": 2, page_num: __page_num, select_case: $("#check_case option:selected").prop("value"), search_key: $("#search_key").prop("value"), sort_field:$("#sort_field").prop("value")}, function(data){
+		$.post("library/trans_api.php", {"db_name": "<?= $db_name;?>", "case": 2, page_num: __page_num, select_case: $("#check_case option:selected").prop("value"), search_key: $("#search_key").prop("value"), sort_field:$("#sort_field").prop("value")}, function(data){
 			hide_loading_message();
 			$("#tbl_sentences tbody").html(data);
 			reload_data($("#check_case option:selected").prop("value"));
 		});
-		$.post("library/trans_api.php", {"case": 21, page_num: __page_num, select_case: $("#check_case option:selected").prop("value"), search_key: $("#search_key").prop("value"), sort_field:$("#sort_field").prop("value")}, function(data){
+		$.post("library/trans_api.php", {"db_name": "<?= $db_name;?>", "case": 21, page_num: __page_num, select_case: $("#check_case option:selected").prop("value"), search_key: $("#search_key").prop("value"), sort_field:$("#sort_field").prop("value")}, function(data){
 			$("#page_sentences").html(data);
 			$("#goto_page_sentence").unbind("keydown").keydown(function(e){
 				if(e.keyCode == 13) {
@@ -327,7 +327,7 @@
 			alert("Source and Destination word can't be empty.");
 			return;
 		}
-		$.post("library/trans_api.php", {"case": 2001, src: srcWord, dst: dstWord}, function(data){
+		$.post("library/trans_api.php", {"db_name": "<?= $db_name;?>", "case": 2001, src: srcWord, dst: dstWord}, function(data){
 			$("#newWordModal").modal("hide");
 		});
 	} 
@@ -339,7 +339,7 @@
 			alert("Source and Destination word can't be empty.");
 			return;
 		}
-		$.post("library/trans_api.php", {"case": 2002, src: srcWord, dst: dstWord, pattern: pattern}, function(data){
+		$.post("library/trans_api.php", {"db_name": "<?= $db_name;?>", "case": 2002, src: srcWord, dst: dstWord, pattern: pattern}, function(data){
 			$("#newSentenceModal").modal("hide");
 		});
 	}

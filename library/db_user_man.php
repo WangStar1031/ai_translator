@@ -1,15 +1,6 @@
 <?php
 	require_once __DIR__ . '/MySql.php';
-	define("DB_TYPE", "mysql");
-	define("DB_HOST", "127.0.0.1");
-	define("DB_USER", "root");
-	define("DB_NAME", "ai_trans");
-
-	if(@file_get_contents(__DIR__."/localhost"))
-		define("DB_PASSWORD", "");
-	else
-		define("DB_PASSWORD", "1234567812345678");
-	$db = new Mysql();
+	$db = new Mysql("ai_trans");
 	$db->exec("set names utf8");
 	function userVerification( $_userName, $_password){
 		global $db;

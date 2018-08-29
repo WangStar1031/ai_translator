@@ -9,6 +9,10 @@
 	text-decoration: none;
 	color: #eee;
 }
+.topBar a:hover{
+	text-decoration: none;
+	color: white;
+}
 .topBar img, .topBar .topUserAvatar img{
 	width: 40px;
 }

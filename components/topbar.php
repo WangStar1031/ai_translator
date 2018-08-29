@@ -12,11 +12,15 @@
 	$userRole = $userInfo['role'];
 	require_once 'library/constants.php';
 
+	$arrRoles = [ROLE_STEWARD, ROLE_NEWS, ROLE_GPMODELS, ROLE_MIZUHOFX, ROLE_WATARI, ROLE_SAKE, ROLE_NDK];
+	$arrClass = ["jraStewardReports", "jraNewsReports", "gbpModels", "MizuhoFX", "Watami", "Sake Brewery", "NDK Reports"];
+	$arrHrefs = ["jra_stewards_reports.php", "jra_news_reports.php", "#", "#", "#", "#", "#"];
+	$arrTitle = ["JRA Stewards", " JRA News", "GP Models", "Mizuho FX", "Watami", "Sake Brewery", "NDK Reports"];
 ?>
 <div class="topBar col-lg-12">
-	<a href="#">
+	<a href="dashboard.php">
 		<img src="assets/imgs/vision-logo.png">
-		<span class="topTitle"><strong>JTS</strong> dashboard</span>
+		<span class="topTitle"><strong>AI</strong> Translation</span>
 	</a>
 	<div class="topUserInfo">
 		<a href="logout.php">Log Out &nbsp&nbsp<span><i class="fa fa-sign-out"></i></span></a>

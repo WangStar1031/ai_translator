@@ -3,11 +3,19 @@
 * MollyCMS
 * File: Database.class.php
 **/
+define("DB_TYPE", "mysql");
+define("DB_HOST", "127.0.0.1");
+define("DB_USER", "root");
+
+if(@file_get_contents(__DIR__."/localhost"))
+	define("DB_PASSWORD", "");
+else
+	define("DB_PASSWORD", "1234567812345678");
 class Mysql extends \PDO {
 
 	private $prefix = false;
 
-	public function __construct($_dbName=DB_NAME) {
+	public function __construct($_dbName) {
 		parent::__construct(
 				DB_TYPE.
 				':host='.DB_HOST.
