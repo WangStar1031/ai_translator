@@ -1,0 +1,9 @@
+.report-contents table td{
+	border: 1px solid gray;
+}
+.report-contents table{
+	margin-bottom: 20px;
+}
+.report-total a.selected{
+	color: blue;
+}

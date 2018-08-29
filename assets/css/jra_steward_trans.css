@@ -1,0 +1,87 @@
+
+	* {
+		font-family: Times New Roman;
+	}
+
+	table, td{
+		font-size: 16px;
+	}
+
+	h2 {
+		font-size: 24px;
+		font-family: Times New Roman;
+	}
+	hr {
+	    margin-top: 0.3rem;
+	    margin-bottom: 0.3rem;
+	}
+	.edit_on span.sentence_pattern {
+		position: relative;
+		color: #333333;
+		cursor: pointer;
+		display: inline-block;
+		padding-right:30px;
+		line-height: 30px;
+	}
+	.edit_on span.sentence_pattern:hover {
+		color: mediumblue;
+	}
+	.edit_on span.sentence_pattern:before {
+		content: "[";
+		color: red;
+		font-weight:bold;
+	}
+	.edit_on span.sentence_pattern:after {
+		content: "]";
+		color: red;
+		font-weight:bold;
+	}
+	.edit_off .manual_edit{
+		display: none;
+	}
+	.manual_edit {
+		display: block;
+		position: absolute;
+		color: red;
+		font-weight: bold;
+		top: -10px;
+		right: -5px;
+		width: 30px;
+		text-align: left;
+	}
+	.zeroStatus{
+		display: none;
+	}
+	.edit_on .zeroStatus{
+		display: inline-block !important;
+		width: 1em;
+	}
+	a.btnForExport{
+		color:black;
+		text-decoration: none;
+	}
+	.btnForExport{
+		// float: right;
+		margin-left: 10px;
+		display: inline-block;
+		background-color: limegreen;
+		cursor: pointer;
+	}
+	.btnForExport:hover{
+		opacity: 0.8;
+	}
+	#tblCustomer{
+		width: 100%;
+	}
+	#tblCustomer tr td{
+		padding: 0px;
+	}
+	#tblCustomer tr input{
+		width: 100%;
+		border: none;
+		margin: 0px;
+	}
+	#tblCustomer tr td div{
+		padding: 0px 5px;
+		cursor: pointer;
+	}
